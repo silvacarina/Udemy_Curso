@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <style>
+        .estilo1 {
+            background-color: yellow;
+        }
+
+        .estilo2 {
+            background-color: red;
+        }
+
+        .estilo3 {
+            background-color: green;
+        }
+
+    </style>
+
+    <script>
+
+        function modificaFoco() {
+            document.getElementById('alterar_cor').className = 'estilo1'
+        }
+
+        function caracter() {
+            var valoresCampo = document.getElementById('alterar_cor').value
+
+            console.log(valoresCampo.length)
+
+            if (valoresCampo.length >= 3)  {
+                document.getElementById('alterar_cor').className = 'estilo3'
+            }
+
+            if (valoresCampo.length < 3)  {
+                document.getElementById('alterar_cor').className = 'estilo2'
+            }
+        }
+
+    </script>
+</head>
+<body>
+  
+    <input id="alterar_cor" onfocus="modificaFoco()" onblur="caracter()" type="text"> 
+
+</body>
+</html>
